@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Data Quality Playground</title><link rel="stylesheet" href="styles.css"></head><body><div class="shell"><div class="topbar"><div class="brand">Data Quality Playground</div><a href="https://raoulmunet.github.io/dev-data-tools/">Dev Data Tools</a></div><section class="hero"><h1>Data Quality Playground</h1><p class="muted">Test readable rules against CSV data.</p></section><section class="panel"><div class="cols"><textarea id="data">id,email,amount,country
+1,a@example.com,100,RO
+2,,50,FR
+2,b@example.com,-5,XX</textarea><textarea id="rules">id NOT NULL
+id UNIQUE
+email NOT NULL
+amount >= 0
+country IN RO,FR,DE</textarea></div><div class="toolbar"><button class="primary" id="run">Run checks</button></div><div id="summary" class="statrow"></div><div id="result"></div></section></div><script src="app.js"></script></body></html>
